@@ -84,6 +84,8 @@ class Worker {
     });
   }
 
+
+
   /**
    * Get the Lock of an object.
    * @param {object} key
@@ -171,6 +173,18 @@ class Worker {
     } else {
       throw new Error('a listener must have a callback.');
     }
+  }
+
+  clear(callback){
+    if(typeof callback === 'function'){
+      this.handle('clear', null, null, callback);
+    }
+
+    return new Promise((resolve) => {
+      this.handle('clear', null, null, () => {
+        resolve();
+      });
+    });
   }
 
   /**

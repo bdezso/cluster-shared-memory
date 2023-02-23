@@ -115,6 +115,19 @@ class Manager {
         )
       );
     }
+  } 
+
+  clear(key,value,callback){
+    this.__sharedMemory__.clear();
+    this.__sharedLRUMemory__.clear();
+
+    if (typeof callback === 'function') {
+      callback('OK');
+    }
+    
+    return new Promise((resolve) => {
+      resolve('OK');
+    });
   }
 
   /**
