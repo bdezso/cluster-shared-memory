@@ -24,7 +24,7 @@ class Manager {
       listeners: {},
     };
 
-    this.defaultLRUOptions = { max: 10000, maxAge: 1000 * 60 * 5 };
+    this.defaultLRUOptions = { max: 20000 };
 
     this.__sharedLRUMemory__ = new LRU(this.defaultLRUOptions);
 
