@@ -1,3 +1,7 @@
+# new-fork
+I've updated lru-cache to the latest version and I've added clear method to the manager.
+It is recommended to use this fork. 🔥 
+
 # cluster-shared-memory
 ![npm](https://img.shields.io/npm/v/cluster-shared-memory)
 ![node-current](https://img.shields.io/node/v/cluster-shared-memory)
